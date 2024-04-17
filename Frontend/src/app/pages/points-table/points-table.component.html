@@ -1,0 +1,32 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+
+<div class="container mt-3">
+    <h1 style="text-align: center;">IPL 2024 Points Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Pos</th>
+                <th>Team</th>
+                <th>Matches Played</th>
+                <th>Won</th>
+                <th>Lost</th>
+                <th>Tied</th>
+                <th>Points</th>
+                <th>Net Run Rate</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let val of teams;let i = index">
+            <tr>
+                <td>{{i + 1}}</td>
+                <td><img class="team-logo" [src]="val.image" alt="Team 1 Logo">{{val.teamName}}</td>
+                <td>{{val.matches_played}}</td>
+                <td>{{val.matches_won}}</td>
+                <td>{{val.matches_lost}}</td>
+                <td>{{val.matches_tied}}</td>
+                <td>{{val.points}}</td>
+                <td>{{val.run_rate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,73 @@
+<!-- <div class="grid-container mt-3 ml-3">
+  <ng-container *ngFor="let val of polls">
+    <div class="card">
+      <div class="question">{{val.question}}</div>
+      <ng-container *ngFor="let opt of val.option">
+        <div class="choices">
+          <button (click)="getValue(val.id,opt.option)" class="mt-3">{{opt.option}}</button>
+        </div>
+      </ng-container>
+
+      <div class="results-container mt-3" *ngIf="val.result != null">
+        <h1>Total Count : {{val.result.total_vote}}</h1>
+        <span *ngFor="let Val of val.result.option_counts | keyvalue">
+          <h3>{{Val.key}} : {{Val.value}}</h3>
+        </span>
+      </div>
+    </div>
+  </ng-container>
+</div> -->
+
+
+
+<div class="grid-container mt-3 ml-3">
+  <ng-container *ngFor="let val of polls">
+    <div class="card" >
+      <div class="card-body">
+        <h5 class="card-title">{{val.question}}</h5>
+        <div class="results-container mt-3" *ngIf="val.result != null">
+          <h1>Total Votes : {{val.result.total_vote}}</h1>
+          <!-- <span *ngFor="let Val of val.result.option_percent | keyvalue"> -->
+            <span *ngFor="let opt of val.option">
+              <div style="background-color: white; margin-bottom: 10px; text-align: center; border-radius: 40px;">{{opt.option}}</div>
+            </span>
+            <div class="progress" style="height: 50px; border-radius: 20px;">
+              <div *ngFor="let Val of val.result.option_percent | keyvalue ; let i = index" [ngClass]="['progress-bar', barColors[i]]" [style.width.%]="calculatePercentage(Val.value, val.result.total_vote)" role="progressbar" aria-valuemin="0" aria-valuemax="100">{{Val.key}} {{calculatePercentage(Val.value, val.result.total_vote)}}%</div>
+            </div>    
+          <!-- </span> -->
+        </div>
+      </div>  
+      <!-- Additional cards -->
+      <span *ngIf="val.result == null else elsecontiner">
+      <div class="additional-cards">
+        <ng-container *ngFor="let opt of val.option">
+        <div class="additional-card">
+          <div class="card-rotation">
+            <div class="card-body">
+              <button class="btn btn-primary mt-3" (click)="getValue(val.id,opt.option)">{{opt.option}}</button>
+            </div>
+          </div>
+        </div>
+        </ng-container>
+      </div>
+    </span>
+    </div>
+
+
+    <ng-template #elsecontiner>
+    
+      <div class="additional-cards">
+        <div class="additional-card">
+          <div class="card-rotation">
+            <div class="card-body">
+              <h1>You Have Choosen : {{val.result.option.option}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    
+  </ng-container>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="container mt-3">
+    <div style="background-color: rgba(153, 50, 204, 0.7); border-radius: 20px; margin: 10px 0px; color: white;">
+        <h1 class="text-center mb-4">IPL 2024 Points Table</h1>
+    </div>
+    <div class="row">
+        <ng-container *ngFor="let val of teams; let i = index;">
+            <div class="col-md-4 mb-3" *ngIf="i >= startIndex && i < (startIndex + 3)">
+                <div class="card">
+                    <div class="background-image" [ngStyle]="{ 'background-image': 'url(' + val.image + ')'}"></div>
+                    <div class="card-body">
+                        <div style="display: flex; margin-left: 10px; justify-content: center; align-items: center;">
+                            <h5 class="card-title">{{val.teamName}}</h5>
+                            <img [src]="val.image" width="100px" height="100px" alt="logo">
+                        </div>
+                        <p class="card-text">Matches Played: {{val.matches_played}}</p>
+                        <p class="card-text">Won: {{val.matches_won}}</p>
+                        <p class="card-text">Lost: {{val.matches_lost}}</p>
+                        <p class="card-text">Tied: {{val.matches_tied}}</p>
+                        <p class="card-text">Points: {{val.points}}</p>
+                        <p class="card-text">Net Run Rate: {{val.run_rate}}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" (click)="nextPage()">Next</button>
+    </div>
+</div>

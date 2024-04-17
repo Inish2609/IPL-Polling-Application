@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgba(153, 50, 204,0.6);
+    border-radius: 20px; 
+    margin-top: 10px;
+}
+
+.center-content {
+    text-align: center;
+}

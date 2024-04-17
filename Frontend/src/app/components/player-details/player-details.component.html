@@ -1,0 +1,37 @@
+<div>
+    <div class="container">
+      <div class="column">
+        <img [src]="Details.image" width="700px" height="700px">
+      </div>
+      <div class="column" style="margin:auto">
+        <div class="info">
+          <h1>{{Details.name}}</h1>
+          <div style="background-color: rgba(240, 248, 255,0.5);border-radius: 30px;">
+            <h1 style="text-align: center;">{{Details.nationality}}</h1>
+          </div>
+        </div>
+        <div class="overview">
+          <h3>Player Overview</h3>
+          <div class="details">
+            <div class="box">
+              <h1>{{Details.debut}}</h1>
+              <p>IPL Debut</p>
+            </div>
+            <div class="box">
+              <h1>{{Details.roll}}</h1>
+              <p>Specialization</p>
+            </div>
+            <div class="box">
+              <h1>{{Details.dob}}</h1>
+              <p>Date of Birth</p>
+            </div>
+            <div class="box">
+              <h1>{{Details.matches}}</h1>
+              <p>Matches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

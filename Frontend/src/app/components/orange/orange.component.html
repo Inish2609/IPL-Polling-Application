@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="center-content" style="background-color:rgba(153, 50, 204,0.7);border-radius: 20px;margin: 10px 0px;color: white; height: 70px;">
+        <h1 class="text-center mt-5">Top 5 Orange Cap Holders</h1>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4 mt-3" *ngFor="let val of players.slice(0,5)">
+            <a routerLink="/pages/players/{{val.id}}">
+                <div class="card" style="background-color: rgba(236, 120, 12,0.5);">
+                    <div class="card-body">
+                        <div style="display: flex; margin-left: 10px; justify-content: center; align-items: center;">
+                            <h5 class="card-title player-name">{{val.name}}</h5>
+                            <div style="background-color: yellow; margin-left: 13px; border-radius: 60px;">
+                                <img [src]="val.image" width="100px" height="100px" alt="logo">
+                            </div>
+                        </div>
+                        <p class="card-text team">Team: {{val.teamName}}</p>
+                        <p class="card-text">Runs : {{val.runs}}</p>
+                        <p class="card-text">Nationality : {{val.nationality}}</p>
+                        <p class="card-text">Roll : {{val.roll}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

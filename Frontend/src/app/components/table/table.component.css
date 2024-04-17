@@ -1,0 +1,30 @@
+.matches-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color:burlywood;
+  }
+  
+  .matches-table th, .matches-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .matches-table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .matches-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .matches-table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .matches-table tbody td {
+    font-size: 14px;
+  }
+  

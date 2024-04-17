@@ -1,0 +1,34 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px; /* Adjust gap between columns */
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info, .overview {
+    margin-top: 20px;
+  }
+  
+  .details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Adjust gap between items */
+  }
+  
+  .box {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 20   px;
+    padding: 10px;
+  }
+  
+  .column:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+  }
+  

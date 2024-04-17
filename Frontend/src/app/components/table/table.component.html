@@ -1,0 +1,23 @@
+<div class="container mt-3">
+    <table class="matches-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Fixture</th>
+            <th>Venue</th>
+            <th>Time</th>
+            <th>Won By</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let val of schedules">
+          <tr>
+            <td>{{val.date}}</td>
+            <td>{{val.fixture}}</td>
+            <td>{{val.venue}}</td>
+            <td>{{val.time}}</td>
+            <td>{{val.won_by}}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+  

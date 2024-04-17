@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="team-image">
+        <img [src]="Details.image" alt="Logo">
+    </div>
+    <div class="vl"></div>
+    <div class="container1">
+        <h1>{{Details.teamName}}</h1>
+        <div class="image-container">
+            <img src="/assets/team-trophy.png" alt="Team Trophy">
+                <div class="trophy-year" >
+                    <span *ngFor="let val of Details.titleYears">{{val.title}},</span>
+                </div>
+        </div>
+        <div class="official-site">
+            <a href="#">Official Team Site</a>
+        </div>
+    </div>
+    <div class="team-details">
+        <table>
+            <tr>
+                <th>Owner</th>
+                <td>{{Details.owner}}</td>
+            </tr>
+            <tr>
+                <th>Coach</th>
+                <td>{{Details.coach}}</td>
+            </tr>
+            <tr>
+                <th>Venue</th>
+                <td>{{Details.venue}}</td>
+            </tr>
+            <tr>
+                <th>Captain</th>
+                <td>{{Details.captain}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

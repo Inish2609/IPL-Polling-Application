@@ -1,0 +1,17 @@
+.container{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    perspective: 1000px;
+}
+
+.card{
+    background-color:darkslateblue;
+    backdrop-filter: blur(50px);
+    width: 110px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: scale(1.2) rotateX(20deg); /* Scale and rotate on hover */
+}

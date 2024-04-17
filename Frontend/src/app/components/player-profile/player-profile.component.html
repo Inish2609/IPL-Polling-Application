@@ -1,0 +1,17 @@
+<div class="card-container">
+    <div *ngFor="let player of Details" class="card-wrapper">
+        <a routerLink="/pages/players/{{player.id}}">
+            <div class="card">
+                <div class="card-image">
+                  <img [src]="player.image">
+                </div>
+                <hr class="line">
+                <div class="card-content">
+                  <h2>{{player.name}}</h2>
+                  <p>{{player.roll}}</p>
+                </div>
+              </div>
+        </a>
+    </div>
+  </div>
+  

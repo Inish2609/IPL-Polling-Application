@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <ng-container *ngFor="let img of images; let i = index;">
+            <div class="col-md-2 mt-3 md-3">
+                <div class="card">
+                    <a routerLink="/pages/teamDetails/{{img.team_name}}">
+                        <img [src]="img.image" class="card-img-top" alt="Image">
+                    </a>
+                </div>
+            </div>
+            <div class="w-100 d-none d-md-block" *ngIf="(i + 1) % 5 === 0"></div>
+        </ng-container>
+    </div>
+</div>

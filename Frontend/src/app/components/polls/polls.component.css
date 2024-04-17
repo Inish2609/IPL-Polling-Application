@@ -1,0 +1,133 @@
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-right: 10px !important;
+  }
+  
+ .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #373b44, #4286f4) !important;
+  }
+  
+  .choices input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .choices label {
+    cursor: pointer;
+  }
+
+
+  .results-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+
+
+ .grid-container {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.card {
+  position: relative;
+  transition: transform 0.5s;
+  perspective: 1000px;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-body {
+  backface-visibility: hidden;
+}
+
+.additional-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  background-image: url(/assets/team-trophy.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background: linear-gradient(to right, #493240, #f09) !important;}
+
+.card:hover .additional-cards {
+  visibility: visible;
+}
+
+.additional-card {
+  max-width: 80%;
+}
+
+.card-rotation {
+  transition: transform 0.5s;
+}
+
+.card:hover .card-rotation {
+  transform: rotateY(180deg);
+}
+
+.additional-cards.show-additional .card {
+  visibility: hidden;
+}
+
+.card {
+  position: relative;
+  transition: transform 0.5s;
+  perspective: 1000px;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+  visibility: hidden;
+}
+
+.card-body {
+  backface-visibility: hidden;
+}
+
+.additional-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  background-color: white;
+}
+
+.additional-cards.show-additional {
+  visibility: visible;
+}
+
+.additional-card {
+  max-width: 80%;
+}
+
+.card-rotation {
+  transition: transform 0.5s;
+}
+
+.card:hover .card-rotation {
+  transform: rotateY(180deg);
+}   
